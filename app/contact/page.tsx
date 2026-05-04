@@ -128,6 +128,16 @@ export default function Contact() {
     }
   }
 
+  const [selectedBooking, setSelectedBooking] = useState<any>(null);
+
+  function openBookingDetails(booking: any) {
+    setSelectedBooking(booking);
+  }
+
+  function closeBookingDetails() {
+    setSelectedBooking(null);
+  }
+
   return (
     <>
       {adminOpen && (
@@ -196,7 +206,11 @@ export default function Contact() {
               </div>
 
               {filteredBookings.map((b: any) => (
-                <div key={b.id} className="border p-4 mb-3 rounded-lg">
+                <div
+                  key={b.id}
+                  onDoubleClick={() => openBookingDetails(b)}
+                  className="border p-4 mb-3 rounded-lg cursor-pointer hover:bg-gray-50"
+                >
                   <p>
                     <b>{b.name}</b> - {b.service}
                   </p>
@@ -248,6 +262,65 @@ export default function Contact() {
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+
+          {selectedBooking && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+              <div className="bg-white w-[90%] max-w-xl rounded-xl p-6 shadow-xl relative">
+                {/* CLOSE BUTTON */}
+                <button
+                  onClick={closeBookingDetails}
+                  className="absolute top-3 right-3 text-red-500 font-bold"
+                >
+                  ✕
+                </button>
+
+                <h2 className="text-2xl font-bold mb-4 text-blue-900">
+                  Booking Details
+                </h2>
+
+                <div className="space-y-2 text-blue-800">
+                  <p>
+                    <b>Name:</b> {selectedBooking.name}
+                  </p>
+                  <p>
+                    <b>Phone:</b> {selectedBooking.phone}
+                  </p>
+                  <p>
+                    <b>Email:</b> {selectedBooking.email}
+                  </p>
+                  <p>
+                    <b>Address:</b> {selectedBooking.address}
+                  </p>
+                  <p>
+                    <b>Service:</b> {selectedBooking.service}
+                  </p>
+                  <p>
+                    <b>Date:</b> {selectedBooking.date}
+                  </p>
+                  <p>
+                    <b>Time:</b> {selectedBooking.time || "Not specified"}
+                  </p>
+                  <p>
+                    <b>Status:</b> {selectedBooking.status}
+                  </p>
+
+                  <div className="pt-2">
+                    <p className="font-semibold">Notes:</p>
+                    <p className="bg-gray-100 p-2 rounded">
+                      {selectedBooking.notes || "None"}
+                    </p>
+                  </div>
+
+                  {selectedBooking.created_at && (
+                    <p className="text-sm text-gray-500 pt-2">
+                      Created:{" "}
+                      {new Date(selectedBooking.created_at).toLocaleString()}
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
           )}
 
