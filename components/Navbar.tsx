@@ -17,7 +17,35 @@ export default function Navbar() {
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/pricing">Pricing</Link>
+          {/* Contact dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setOpen(!open)}
+              className="font-semibold text-blue-700"
+            >
+              Contact ▼
+            </button>
 
+            {open && (
+              <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg p-3 w-52 z-50">
+                <a
+                  href="https://wa.me/27829944982"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-2 hover:bg-gray-100 rounded"
+                >
+                  💬 WhatsApp
+                </a>
+
+                <a
+                  href="mailto:info@sunshinecleaning.co.za"
+                  className="block p-2 hover:bg-gray-100 rounded"
+                >
+                  ✉️ Email
+                </a>
+              </div>
+            )}
+          </div>
           <Link
             href="/contact"
             className="bg-green-500 text-white px-4 py-2 rounded-lg"
