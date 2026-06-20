@@ -401,10 +401,11 @@ export default function Contact() {
                       className="w-full border border-blue-200 p-3 rounded-lg"
                     >
                       <option value="">Select a service</option>
-                      <option>Standard Cleaning</option>
-                      <option>Deep Cleaning</option>
-                      <option>Move-In / Move-Out</option>
-                      <option>Office Cleaning</option>
+                      <option>Standard Cleaning ~ R500</option>
+                      <option>Office Cleaning ~ R900</option>
+                      <option>Deep Cleaning ~ R800</option>
+                      <option>Move-In / Move-Out ~ R1200 </option>
+                      <option>Custom Service ~ Quote</option>
                     </select>
                   </div>
 
@@ -434,7 +435,7 @@ export default function Contact() {
                   {/* NOTES */}
                   <div>
                     <label className="text-sm font-medium">
-                      Additional Notes
+                      Custom Request
                     </label>
                     <textarea
                       name="notes"
