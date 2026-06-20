@@ -62,3 +62,16 @@ body {
   outline: none;
   box-shadow: 0 0 0 2px #93c5fd;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

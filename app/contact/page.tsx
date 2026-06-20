@@ -166,7 +166,7 @@ export default function Contact() {
         <div className="bg-blue-900/40 min-h-screen">
           {/* HEADER */}
           <section className="bg-green-200 py-4 text-center shadow-sm">
-            <h1 className="text-4xl font-bold text-blue-900 mb-3">
+            <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-3">
               Book a Cleaning
             </h1>
             <p className="text-blue-600">
@@ -191,7 +191,7 @@ export default function Contact() {
                 Exit Dashboard
               </button>
 
-              <div className="mb-4 flex gap-2">
+              <div className="mb-4 flex flex-wrap gap-2">
                 {["all", "pending", "confirmed", "completed", "cancelled"].map(
                   (f) => (
                     <button
@@ -221,7 +221,7 @@ export default function Contact() {
                     Status: <b>{b.status}</b>
                   </p>
 
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {/* PENDING → Confirm / Cancel */}
                     {b.status === "pending" && (
                       <>
@@ -326,7 +326,7 @@ export default function Contact() {
 
           {/* FORM SECTION */}
           <section className="max-w-6xl mx-auto px-6 py-16">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* FORM */}
               <div className="bg-white rounded-2xl shadow p-8">
                 <h2 className="text-2xl font-semibold mb-6 text-blue-900">

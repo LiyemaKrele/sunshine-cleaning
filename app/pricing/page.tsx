@@ -24,7 +24,7 @@ export default function Pricing() {
             ].map(([name, price]) => (
               <div
                 key={name}
-                className="flex justify-between py-4 text-blue-700"
+                className="flex flex-col sm:flex-row sm:justify-between gap-2 py-4 text-blue-700"
               >
                 <span>{name}</span>
                 <span className="text-blue-900 font-semibold">{price}</span>

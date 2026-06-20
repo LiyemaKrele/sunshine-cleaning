@@ -3,18 +3,17 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-
       {/* HERO */}
       <section className="bg-blue-100 py-24 text-center px-6">
-        <h1 className="text-5xl font-bold text-blue-900 mb-4">
+        <h1 className="text-3xl font-bold text-blue-900 mb-4">
           Professional Home Cleaning Services in Cape Town
         </h1>
 
-        <p className="text-blue-700 text-lg mb-8">
+        <p className="text-blue-700 text-base md:text-lg mb-8">
           Reliable, affordable & eco-friendly cleaning for your home or office.
         </p>
 
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link href="/contact">
             <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg shadow">
               Book a Cleaning
@@ -31,9 +30,7 @@ export default function Home() {
 
       {/* HOW IT WORKS */}
       <section className="py-16 text-center bg-white">
-        <h2 className="text-3xl font-bold text-blue-900 mb-10">
-          How It Works
-        </h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-10">How It Works</h2>
 
         <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto text-blue-700">
           <p>1. Book Online</p>
@@ -45,9 +42,7 @@ export default function Home() {
 
       {/* TRUST SECTION */}
       <section className="bg-blue-50 py-16 text-center px-6">
-        <h2 className="text-3xl font-bold text-blue-900 mb-6">
-          Why Choose Us
-        </h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-6">Why Choose Us</h2>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto text-blue-700">
           <p>✔ Trained & Vetted Staff</p>
@@ -108,7 +103,6 @@ export default function Home() {
           </button>
         </Link>
       </section>
-
     </main>
   );
 }

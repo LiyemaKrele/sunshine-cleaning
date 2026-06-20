@@ -5,7 +5,9 @@ export default function About() {
     <main className="bg-blue-50 min-h-screen">
       {/* HEADER */}
       <section className="bg-green-200 py-4 text-center shadow-sm">
-        <h1 className="text-4xl font-bold text-blue-900 mb-3">About Us</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-3">
+          About Us
+        </h1>
         <p className="text-blue-600">
           Learn more about Sunshine Cleaning Services Agent
         </p>
@@ -14,7 +16,7 @@ export default function About() {
       {/* IMAGE + INTRO */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="bg-white rounded-2xl shadow overflow-hidden">
-          <div className="relative w-full h-80 bg-blue-100">
+          <div className="relative w-full h-56 md:h-80 bg-blue-100">
             <Image
               src="/images/cleaner.jpg"
               alt="Cleaner smiling"
