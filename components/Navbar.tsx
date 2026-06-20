@@ -1,26 +1,51 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="flex justify-between items-center p-5 bg-white shadow">
+    <nav className="flex justify-between items-center p-5 bg-white shadow relative">
+      <h1 className="font-bold text-xl text-blue-900">☀️ Sunshine</h1>
 
-      <h1 className="font-bold text-xl text-blue-900">
-        ☀️ Sunshine
-      </h1>
-
-      <div className="space-x-6 text-blue-700 flex items-center">
-
+      <div className="flex items-center gap-6 text-blue-700">
+        {/* About moved next to Home */}
         <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
         <Link href="/services">Services</Link>
         <Link href="/pricing">Pricing</Link>
-        <Link href="/about">About</Link>
 
-        <a
-          href="https://wa.me/27829944982"
-          className="text-green-600 font-semibold"
-        >
-          WhatsApp
-        </a>
+        {/* Contact dropdown */}
+        <div className="relative">
+          <button
+            onClick={() => setOpen(!open)}
+            className="font-semibold text-blue-700"
+          >
+            Contact ▼
+          </button>
+
+          {open && (
+            <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg p-3 w-52 z-50">
+              <a
+                href="https://wa.me/27829944982"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-2 hover:bg-gray-100 rounded"
+              >
+                💬 WhatsApp
+              </a>
+
+              <a
+                href="mailto:info@sunshinecleaning.co.za"
+                className="block p-2 hover:bg-gray-100 rounded"
+              >
+                ✉️ Email
+              </a>
+            </div>
+          )}
+        </div>
 
         <Link
           href="/contact"
@@ -28,7 +53,6 @@ export default function Navbar() {
         >
           Book Now
         </Link>
-
       </div>
     </nav>
   );
