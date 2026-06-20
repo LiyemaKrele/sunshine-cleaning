@@ -351,54 +351,62 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* FULL NAME */}
                   <div>
-                    <label className="text-sm font-medium">Full Name</label>
+                    <label className="text-sm font-medium text-blue-900">
+                      Full Name
+                    </label>
                     <input
                       name="name"
                       required
-                      className="border border-blue-200 p-2 rounded w-full"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     />
                   </div>
 
                   {/* PHONE */}
                   <div>
-                    <label className="text-sm font-medium">Phone Number</label>
+                    <label className="text-sm font-medium text-blue-900">
+                      Phone Number
+                    </label>
                     <input
                       name="phone"
                       required
-                      className="w-full border border-blue-200 p-3 rounded-lg"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     />
                   </div>
 
                   {/* EMAIL */}
                   <div>
-                    <label className="text-sm font-medium">Email Address</label>
+                    <label className="text-sm font-medium text-blue-900">
+                      Email Address
+                    </label>
                     <input
                       name="email"
                       required
                       type="email"
-                      className="border border-blue-200 p-2 rounded w-full"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     />
                   </div>
 
                   {/* ADDRESS */}
                   <div>
-                    <label className="text-sm font-medium">Place Address</label>
+                    <label className="text-sm font-medium text-blue-900">
+                      Place Address
+                    </label>
                     <input
                       name="address"
                       required
-                      className="border border-blue-200 p-2 rounded w-full"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     />
                   </div>
 
                   {/* SERVICE */}
                   <div>
-                    <label className="text-sm font-medium">
+                    <label className="text-sm font-medium text-blue-900">
                       Type of Cleaning
                     </label>
                     <select
                       name="service"
                       required
-                      className="w-full border border-blue-200 p-3 rounded-lg"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     >
                       <option value="">Select a service</option>
                       <option>Standard Cleaning ~ R500</option>
@@ -411,35 +419,37 @@ export default function Contact() {
 
                   {/* DATE */}
                   <div>
-                    <label className="text-sm font-medium">Booking Date</label>
+                    <label className="text-sm font-medium text-blue-900">
+                      Booking Date
+                    </label>
                     <input
                       name="date"
                       required
                       type="date"
-                      className="border border-blue-200 p-2 rounded w-full"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     />
                   </div>
 
                   {/* TIME (NEW FEATURE) */}
                   <div>
-                    <label className="text-sm font-medium">
+                    <label className="text-sm font-medium text-blue-900">
                       Preferred Time
                     </label>
                     <input
                       name="time"
                       type="time"
-                      className="border border-blue-200 p-2 rounded w-full"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     />
                   </div>
 
                   {/* NOTES */}
                   <div>
-                    <label className="text-sm font-medium">
+                    <label className="text-sm font-medium text-blue-900">
                       Custom Request
                     </label>
                     <textarea
                       name="notes"
-                      className="w-full border border-blue-200 p-3 rounded-lg"
+                      className="w-full border border-blue-200 p-3 rounded-lg bg-white text-blue-900"
                     />
                   </div>
 

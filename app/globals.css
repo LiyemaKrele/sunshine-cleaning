@@ -75,3 +75,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+input,
+select,
+textarea {
+  color: #1e3a8a;
+  background-color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280;
+}
